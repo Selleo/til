@@ -44,7 +44,7 @@ const Search = () => {
   }
 
   return (
-    <div className="search-box" onClick={notifyMessage}>
+    <div className="search-box" onClick={notifyMessage || null}>
       <input
         className="search-box__input"
         type="text"

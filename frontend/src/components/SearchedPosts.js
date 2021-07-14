@@ -9,12 +9,7 @@ const SearchedPosts = () => {
   const searchQuery = useSelector(state => state.searchQuery)
 
   if (!searchedPosts.length) {
-    return (
-      <>
-        {/* <SearchedPhrase phrase={searchQuery} /> */}
-        {searchQuery && <NothingFound text={searchQuery} />}
-      </>
-    )
+    return searchQuery && <NothingFound text={searchQuery} />
   }
 
   return (
