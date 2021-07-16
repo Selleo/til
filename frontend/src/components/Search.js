@@ -25,6 +25,12 @@ const Search = () => {
     }
   }, [hasLeavedRoute, dispatch])
 
+  useEffect(() => {
+    if (!input.length) {
+      history.push('/')
+    }
+  }, [input, history])
+
   const handleInput = event => {
     const targetValue = event.target.value
 
@@ -38,8 +44,6 @@ const Search = () => {
         dispatch(saveSearchedPosts(targetValue))
       }, 300)
       setTimeoutID(timeout)
-    } else {
-      history.push('/')
     }
   }
 

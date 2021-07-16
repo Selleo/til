@@ -115,7 +115,7 @@
 
   &__single-category-wrapper
     margin-right: 16px
-    
+
   &__single-category
     border-radius: $border-radius-lg
     border: 1px solid $color-gray
@@ -200,7 +200,13 @@
     &__user-menu
       max-width: 370px
 
-    +media-breakpoint-up(md)
+  +media-breakpoint-between(sm, md)
+    &__reactions
+      justify-content: space-between
+      width: 60%
+      max-width: 460px
+
+  +media-breakpoint-up(md)
     &__header
       align-items: center
     &__details

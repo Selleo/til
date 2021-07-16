@@ -25,6 +25,15 @@ const Categories = props => {
       currentCategory.scrollIntoView({
         behavior: 'smooth',
       })
+    } else {
+      const firstCategory = document.querySelector(
+        '.categories__single-category'
+      )
+      if (firstCategory) {
+        firstCategory.scrollIntoView({
+          behavior: 'smooth',
+        })
+      }
     }
   })
 

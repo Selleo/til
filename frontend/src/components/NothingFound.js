@@ -7,7 +7,10 @@ const NothingFound = props => {
     <div className="nothing-found-wrapper">
       <img src={NothingFoundImage} alt="alt" />
       <p>
-        Nothing found with phrase: <b>{text}</b>
+        Nothing found with phrase:{' '}
+        <b>
+          <small>{text}</small>
+        </b>
       </p>
     </div>
   )
